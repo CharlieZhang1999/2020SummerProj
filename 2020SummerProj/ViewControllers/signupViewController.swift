@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import FirebaseFirestore
 
 class signupViewController: UIViewController {
 
@@ -18,12 +20,6 @@ class signupViewController: UIViewController {
     @IBOutlet weak var signupBT2: UIButton!
     @IBOutlet weak var errorLB2: UILabel!
     
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configure()
-    }
-    
     func configure() {
         errorLB2.alpha = 0
         Utilities.styleTextField(firstnameTF2)
@@ -34,18 +30,82 @@ class signupViewController: UIViewController {
         Utilities.styleFilledButton(signupBT2)
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure()
     }
-    */
+    
+    // Validate the fields. If everything is correct, this method returns nil or error message otherwise.
+    func validateFieldd() -> String? {
+        
+        // Check that all fields are non-empty
+        if firstnameTF2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            lastnameTF2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            emailTF2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            usernameTF2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
+            passwordTF2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
+            
+            return "Please fill in all the required fields."
+        }
+        
+        // Check if the password is secure
+        let cleanedPassword = passwordTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isPasswordValid(cleanedPassword) == false {
+            return "You password is not secure enough!"
+        }
+        
+        // Check if the email format is valid
+        let cleanedEmail = emailTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+        if Utilities.isEmailValid(cleanedEmail) == false {
+            return "Please enter a valid email address!"
+        }
+        
+        return nil
+    }
+    
+    func showError(_ message:String) {
+        errorLB2.text = message
+        errorLB2.alpha = 1
+    }
+    
+    func transitionToLoginView() {
+        let LoginViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.LoginViewController) as? loginViewController
+        
+        self.view.window?.rootViewController = LoginViewController
+        self.view.window?.makeKeyAndVisible()
+    }
     
     @IBAction func signupTapped(_ sender: Any) {
+        
+        // Validate the fields
+        let errorMessage = validateFieldd()
+        if errorMessage != nil {
+            showError(errorMessage!)
+        } else {
+            // Create cleaned versions of the data
+            let firstName = firstnameTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let lastName = lastnameTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let email = emailTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let username = usernameTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let password = passwordTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            
+            // Create the user
+            Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
+                if err != nil {
+                    self.showError("Error creating user")
+                } else {
+                    let db = Firestore.firestore()
+                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "username": username, "uid": result!.user.uid]) { (error) in
+                        if error != nil {
+                            // Account has been created, but the profile can't be saved in the database
+                            self.showError("Error saving user profiles.")
+                        }
+                    }
+                    // Transition to the home screen
+                    self.transitionToLoginView()
+                }
+            }
+        }
     }
     
 

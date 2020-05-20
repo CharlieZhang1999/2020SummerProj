@@ -16,7 +16,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="g7Q-TI-yad">
-                                <rect key="frame" x="40" y="714.5" width="334" height="107.5"/>
+                                <rect key="frame" x="40" y="702" width="334" height="120"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m3g-Br-Kgo">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="50"/>
@@ -29,7 +29,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NbB-wt-WX6">
-                                        <rect key="frame" x="0.0" y="70" width="334" height="37.5"/>
+                                        <rect key="frame" x="0.0" y="70" width="334" height="50"/>
                                         <state key="normal" title="Sign Up"/>
                                         <connections>
                                             <segue destination="Kqp-pc-P9f" kind="show" id="lQn-Yn-lWf"/>
@@ -37,7 +37,7 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="NbB-wt-WX6" firstAttribute="height" secondItem="m3g-Br-Kgo" secondAttribute="height" multiplier="0.75" id="iSV-Q8-NX3"/>
+                                    <constraint firstItem="NbB-wt-WX6" firstAttribute="height" secondItem="m3g-Br-Kgo" secondAttribute="height" id="Zd7-4S-w0y"/>
                                 </constraints>
                             </stackView>
                         </subviews>
@@ -147,7 +147,7 @@
         <!--Login View Controller-->
         <scene sceneID="Tkf-BC-oTd">
             <objects>
-                <viewController id="abG-LG-ZNQ" customClass="loginViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginVC" id="abG-LG-ZNQ" customClass="loginViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w1j-EA-8N5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -155,7 +155,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fgC-L9-N5s">
                                 <rect key="frame" x="40" y="84" width="334" height="215.5"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cA-IP-ppa">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cA-IP-ppa">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="42.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -198,10 +198,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="su1-bM-MZV"/>
                     <connections>
+                        <outlet property="emailTF1" destination="3cA-IP-ppa" id="ION-S1-fFz"/>
                         <outlet property="errorLB1" destination="c26-An-6a7" id="epa-Dx-NMF"/>
                         <outlet property="loginBT1" destination="LhW-J9-gI9" id="M71-rO-2EO"/>
                         <outlet property="passwordTF1" destination="alN-mh-6f8" id="rDV-e8-FST"/>
-                        <outlet property="usernameTF1" destination="3cA-IP-ppa" id="aMc-C2-ho5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Q1-Zr-2b5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -211,7 +211,7 @@
         <!--Home View Controller-->
         <scene sceneID="LMv-MV-DeZ">
             <objects>
-                <viewController id="bRp-Wr-Ete" customClass="homeViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeVC" id="bRp-Wr-Ete" customClass="homeViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5v4-X1-JEb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

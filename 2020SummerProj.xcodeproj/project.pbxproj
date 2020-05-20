@@ -3,12 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		70C9D88F2B17A651DE929158 /* Pods_2020SummerProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED73196CB19A5CAB0F3EFF /* Pods_2020SummerProjTests.framework */; };
 		90E76B82B1904E89A7AA7CE3 /* Pods_2020SummerProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D1A44A9453D4EB81F03C4 /* Pods_2020SummerProj.framework */; };
+		9FCC246E24757FB1009B0E35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC246D24757FB1009B0E35 /* Constants.swift */; };
+		9FCC247124758BCE009B0E35 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC247024758BCE009B0E35 /* video.mp4 */; };
 		9FCDE4C32474B3F2009F46F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE4C22474B3F2009F46F3 /* GoogleService-Info.plist */; };
 		9FDF146D2474AA7600A0C727 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF146C2474AA7600A0C727 /* AppDelegate.swift */; };
 		9FDF146F2474AA7600A0C727 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF146E2474AA7600A0C727 /* SceneDelegate.swift */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		58474411ADC00EC2B92F8B02 /* Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; path = "Target Support Files/Pods-2020SummerProj-2020SummerProjUITests/Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; sourceTree = "<group>"; };
 		752BC1B8AFCCEFF5000C0C4D /* Pods_2020SummerProj_2020SummerProjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2020SummerProj_2020SummerProjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9FCC246D24757FB1009B0E35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9FCC247024758BCE009B0E35 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		9FCDE4C22474B3F2009F46F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		9FDF14692474AA7600A0C727 /* 2020SummerProj.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = 2020SummerProj.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9FDF146C2474AA7600A0C727 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -123,8 +127,15 @@
 				E81599A638C0693075F2442C /* Pods-2020SummerProjTests.debug.xcconfig */,
 				F8E951A9A4B5F049EC2EBB07 /* Pods-2020SummerProjTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		9FCC246F24758A9A009B0E35 /* Media */ = {
+			isa = PBXGroup;
+			children = (
+				9FCC247024758BCE009B0E35 /* video.mp4 */,
+			);
+			path = Media;
 			sourceTree = "<group>";
 		};
 		9FDF14602474AA7600A0C727 = {
@@ -152,6 +163,7 @@
 		9FDF146B2474AA7600A0C727 /* 2020SummerProj */ = {
 			isa = PBXGroup;
 			children = (
+				9FCC246F24758A9A009B0E35 /* Media */,
 				9FDF14A52474AD5E00A0C727 /* Helpers */,
 				9FDF149C2474AABF00A0C727 /* ViewControllers */,
 				9FDF146C2474AA7600A0C727 /* AppDelegate.swift */,
@@ -199,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				9FDF14A62474AD6800A0C727 /* Utilities.swift */,
+				9FCC246D24757FB1009B0E35 /* Constants.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -313,6 +326,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9FDF14792474AA7700A0C727 /* LaunchScreen.storyboard in Resources */,
+				9FCC247124758BCE009B0E35 /* video.mp4 in Resources */,
 				9FCDE4C32474B3F2009F46F3 /* GoogleService-Info.plist in Resources */,
 				9FDF14762474AA7700A0C727 /* Assets.xcassets in Resources */,
 				9FDF14742474AA7600A0C727 /* Main.storyboard in Resources */,
@@ -451,6 +465,7 @@
 				9FDF14A22474AAFE00A0C727 /* signupViewController.swift in Sources */,
 				9FDF14A72474AD6800A0C727 /* Utilities.swift in Sources */,
 				9FDF14A02474AAF400A0C727 /* loginViewController.swift in Sources */,
+				9FCC246E24757FB1009B0E35 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
