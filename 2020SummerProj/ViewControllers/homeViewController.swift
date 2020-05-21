@@ -7,24 +7,42 @@
 //
 
 import UIKit
+import UserNotifications
 
 class homeViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        localNotifications()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    
+    func localNotifications() {
+        
+        // Ask for permission
+        let center = UNUserNotificationCenter.current()
+        center.requestAuthorization(options: .alert) { (result, error) in
+            
+        }
+        
+        // Create the notification content
+        let content = UNMutableNotificationContent()
+        content.title = "Greetings from Ted!"
+        content.body = "HAHAHAHAHAHAHAHAHHAHAHA!!!!!!!"
+        
+        // Trigger
+        let date = Date().addingTimeInterval(15)
+        let dateComponents = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: date)
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
+        
+        // Create notification request
+        let uniqueIdentifier = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uniqueIdentifier, content: content, trigger: trigger)
+        
+        // Register the request
+        center.add(request) { (error) in
+            
+        }
     }
-    */
 
 }
