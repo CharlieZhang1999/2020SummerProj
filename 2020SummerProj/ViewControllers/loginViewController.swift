@@ -33,10 +33,10 @@ class loginViewController: UIViewController {
         errorLB1.alpha = 1
     }
     
-    func transitionToHomeView() {
-        let HomeViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.HomeViewController) as? homeViewController
+    func transitionToHomepageView() {
+        let HomepageViewController = self.storyboard?.instantiateViewController(identifier: Constants.Storyboard.HomepageViewController) as? homepageViewController
         
-        self.view.window?.rootViewController = HomeViewController
+        self.view.window?.rootViewController = HomepageViewController
         self.view.window?.makeKeyAndVisible()
     }
     
@@ -53,7 +53,7 @@ class loginViewController: UIViewController {
                 if error != nil {
                     self.showError("Credentials invalid!")
                 } else {
-                    self.transitionToHomeView()
+                    self.transitionToHomepageView()
                 }
             }
         }

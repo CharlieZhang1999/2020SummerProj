@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		70C9D88F2B17A651DE929158 /* Pods_2020SummerProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED73196CB19A5CAB0F3EFF /* Pods_2020SummerProjTests.framework */; };
 		90E76B82B1904E89A7AA7CE3 /* Pods_2020SummerProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D1A44A9453D4EB81F03C4 /* Pods_2020SummerProj.framework */; };
+		9F88AFE92476588B001BEA12 /* homepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88AFE82476588B001BEA12 /* homepageViewController.swift */; };
+		9F88AFEB247658C0001BEA12 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88AFEA247658C0001BEA12 /* firstViewController.swift */; };
+		9F88AFED247658CB001BEA12 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88AFEC247658CB001BEA12 /* secondViewController.swift */; };
+		9F88AFEF247658D6001BEA12 /* thirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88AFEE247658D6001BEA12 /* thirdViewController.swift */; };
 		9FCC246E24757FB1009B0E35 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FCC246D24757FB1009B0E35 /* Constants.swift */; };
 		9FCC247124758BCE009B0E35 /* video.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = 9FCC247024758BCE009B0E35 /* video.mp4 */; };
 		9FCDE4C32474B3F2009F46F3 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9FCDE4C22474B3F2009F46F3 /* GoogleService-Info.plist */; };
@@ -23,7 +27,6 @@
 		9FDF149E2474AAEA00A0C727 /* initialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF149D2474AAEA00A0C727 /* initialViewController.swift */; };
 		9FDF14A02474AAF400A0C727 /* loginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF149F2474AAF400A0C727 /* loginViewController.swift */; };
 		9FDF14A22474AAFE00A0C727 /* signupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF14A12474AAFE00A0C727 /* signupViewController.swift */; };
-		9FDF14A42474AB0B00A0C727 /* homeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF14A32474AB0B00A0C727 /* homeViewController.swift */; };
 		9FDF14A72474AD6800A0C727 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FDF14A62474AD6800A0C727 /* Utilities.swift */; };
 		D7AF24BD20CED8FCDB686DE9 /* Pods_2020SummerProj_2020SummerProjUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 752BC1B8AFCCEFF5000C0C4D /* Pods_2020SummerProj_2020SummerProjUITests.framework */; };
 /* End PBXBuildFile section */
@@ -48,6 +51,10 @@
 /* Begin PBXFileReference section */
 		58474411ADC00EC2B92F8B02 /* Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; path = "Target Support Files/Pods-2020SummerProj-2020SummerProjUITests/Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; sourceTree = "<group>"; };
 		752BC1B8AFCCEFF5000C0C4D /* Pods_2020SummerProj_2020SummerProjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2020SummerProj_2020SummerProjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F88AFE82476588B001BEA12 /* homepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageViewController.swift; sourceTree = "<group>"; };
+		9F88AFEA247658C0001BEA12 /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
+		9F88AFEC247658CB001BEA12 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
+		9F88AFEE247658D6001BEA12 /* thirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thirdViewController.swift; sourceTree = "<group>"; };
 		9FCC246D24757FB1009B0E35 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		9FCC247024758BCE009B0E35 /* video.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = video.mp4; sourceTree = "<group>"; };
 		9FCDE4C22474B3F2009F46F3 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -68,7 +75,6 @@
 		9FDF149D2474AAEA00A0C727 /* initialViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = initialViewController.swift; sourceTree = "<group>"; };
 		9FDF149F2474AAF400A0C727 /* loginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = loginViewController.swift; sourceTree = "<group>"; };
 		9FDF14A12474AAFE00A0C727 /* signupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = signupViewController.swift; sourceTree = "<group>"; };
-		9FDF14A32474AB0B00A0C727 /* homeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homeViewController.swift; sourceTree = "<group>"; };
 		9FDF14A62474AD6800A0C727 /* Utilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		A7AA17BD6E5521C88EA382E6 /* Pods-2020SummerProj-2020SummerProjUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020SummerProj-2020SummerProjUITests.debug.xcconfig"; path = "Target Support Files/Pods-2020SummerProj-2020SummerProjUITests/Pods-2020SummerProj-2020SummerProjUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B03FA6EC22191D28988AE360 /* Pods-2020SummerProj.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020SummerProj.release.xcconfig"; path = "Target Support Files/Pods-2020SummerProj/Pods-2020SummerProj.release.xcconfig"; sourceTree = "<group>"; };
@@ -202,7 +208,10 @@
 				9FDF149D2474AAEA00A0C727 /* initialViewController.swift */,
 				9FDF149F2474AAF400A0C727 /* loginViewController.swift */,
 				9FDF14A12474AAFE00A0C727 /* signupViewController.swift */,
-				9FDF14A32474AB0B00A0C727 /* homeViewController.swift */,
+				9F88AFE82476588B001BEA12 /* homepageViewController.swift */,
+				9F88AFEA247658C0001BEA12 /* firstViewController.swift */,
+				9F88AFEC247658CB001BEA12 /* secondViewController.swift */,
+				9F88AFEE247658D6001BEA12 /* thirdViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -457,8 +466,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9FDF14A42474AB0B00A0C727 /* homeViewController.swift in Sources */,
+				9F88AFEB247658C0001BEA12 /* firstViewController.swift in Sources */,
 				9FDF14712474AA7600A0C727 /* ViewController.swift in Sources */,
+				9F88AFE92476588B001BEA12 /* homepageViewController.swift in Sources */,
+				9F88AFEF247658D6001BEA12 /* thirdViewController.swift in Sources */,
+				9F88AFED247658CB001BEA12 /* secondViewController.swift in Sources */,
 				9FDF146D2474AA7600A0C727 /* AppDelegate.swift in Sources */,
 				9FDF146F2474AA7600A0C727 /* SceneDelegate.swift in Sources */,
 				9FDF149E2474AAEA00A0C727 /* initialViewController.swift in Sources */,
