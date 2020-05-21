@@ -7,14 +7,20 @@
 //
 
 import UIKit
+import Firebase
 
 class thirdViewController: UIViewController {
 
+    @IBOutlet weak var usernameLB5: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
+    func configure() {
+        
+    }
+    
     
 
     /*

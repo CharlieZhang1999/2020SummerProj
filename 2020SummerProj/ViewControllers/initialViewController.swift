@@ -8,6 +8,7 @@
 
 import UIKit
 import AVKit
+import Firebase
 
 class initialViewController: UIViewController {
     
@@ -21,11 +22,13 @@ class initialViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         backgroundDisplay()
     }
+    
     
     func configure() {
         Utilities.styleHollowButton(loginBT0)

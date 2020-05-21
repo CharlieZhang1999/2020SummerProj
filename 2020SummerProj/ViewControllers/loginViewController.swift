@@ -53,6 +53,7 @@ class loginViewController: UIViewController {
                 if error != nil {
                     self.showError("Credentials invalid!")
                 } else {
+                    UserDefaults.standard.set(true, forKey: "isLoggedIn")
                     self.transitionToHomepageView()
                 }
             }

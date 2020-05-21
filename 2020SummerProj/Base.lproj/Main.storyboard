@@ -10,7 +10,7 @@
         <!--Initial View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="initialViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialVC" id="BYZ-38-t0r" customClass="initialViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -70,11 +70,11 @@
             <objects>
                 <viewController id="Kqp-pc-P9f" customClass="signupViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a3b-po-Qqb">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="U4m-BW-PLs">
-                                <rect key="frame" x="40" y="40" width="334" height="406"/>
+                                <rect key="frame" x="40" y="84" width="334" height="406"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="omZ-Oz-xn0">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="42.5"/>
@@ -130,7 +130,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7vb-EK-diE">
-                                <rect key="frame" x="87" y="748" width="240" height="40"/>
+                                <rect key="frame" x="87" y="802" width="240" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="vFM-mQ-e4u"/>
                                 </constraints>
@@ -171,11 +171,11 @@
             <objects>
                 <viewController storyboardIdentifier="LoginVC" id="abG-LG-ZNQ" customClass="loginViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="w1j-EA-8N5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fgC-L9-N5s">
-                                <rect key="frame" x="40" y="40" width="334" height="218.5"/>
+                                <rect key="frame" x="40" y="84" width="334" height="218.5"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3cA-IP-ppa">
                                         <rect key="frame" x="0.0" y="0.0" width="334" height="42.5"/>
@@ -213,7 +213,7 @@
                                 </constraints>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6K2-k8-Hzo">
-                                <rect key="frame" x="85" y="748" width="244" height="40"/>
+                                <rect key="frame" x="85" y="802" width="244" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="pDc-fx-zdk"/>
                                 </constraints>
@@ -285,7 +285,7 @@
         <!--First View Controller-->
         <scene sceneID="Ksj-Tb-gqA">
             <objects>
-                <viewController id="t2A-kZ-nwe" customClass="firstViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="FirstVC" id="t2A-kZ-nwe" customClass="firstViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="m1Y-Re-zxG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -301,7 +301,7 @@
         <!--Navigation Controller-->
         <scene sceneID="8Fa-Gn-yGe">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ko1-PN-Sf0" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="InitialRootVC" automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Ko1-PN-Sf0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="dCj-X1-Y7R">
                         <autoresizingMask key="autoresizingMask"/>
@@ -347,7 +347,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kma-hy-qrG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4116" y="918"/>
+            <point key="canvasLocation" x="4116" y="971"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="aRZ-Y5-Nut">
@@ -372,18 +372,30 @@
                     <view key="view" contentMode="scaleToFill" id="b3w-4N-3EA">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FaK-XC-ndj">
+                                <rect key="frame" x="186" y="203" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="dBE-9y-rT7"/>
                     </view>
                     <navigationItem key="navigationItem" id="qEN-UB-CLw"/>
+                    <connections>
+                        <outlet property="usernameLB5" destination="FaK-XC-ndj" id="jZ9-Lj-iSX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t6u-bd-fr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4980" y="917"/>
+            <point key="canvasLocation" x="4980" y="971"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="lpm-U4-7s2"/>
-        <segue reference="SnY-9c-hKx"/>
+        <segue reference="qNA-Bp-RPb"/>
+        <segue reference="lQn-Yn-lWf"/>
     </inferredMetricsTieBreakers>
 </document>

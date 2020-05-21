@@ -7,14 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class homepageViewController: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
+    
     
 
     /*
