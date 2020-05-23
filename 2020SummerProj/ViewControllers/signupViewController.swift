@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseFirestore
+import FirebaseStorage
 
 class signupViewController: UIViewController {
 
@@ -21,9 +22,16 @@ class signupViewController: UIViewController {
     @IBOutlet weak var errorLB2: UILabel!
     @IBOutlet weak var userIMG2: UIImageView!
     
+    var image: UIImage? = nil
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        configure()
+        setUpUserImg()
+    }
+    
     func configure() {
         errorLB2.alpha = 0
-        userIMG2.layer.cornerRadius = userIMG2.frame.size.width / 2
         Utilities.styleTextField(firstnameTF2)
         Utilities.styleTextField(lastnameTF2)
         Utilities.styleTextField(emailTF2)
@@ -32,9 +40,19 @@ class signupViewController: UIViewController {
         Utilities.styleFilledButton(signupBT2)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        configure()
+    func setUpUserImg() {
+        userIMG2.layer.cornerRadius = userIMG2.frame.size.width / 2
+        userIMG2.isUserInteractionEnabled = true
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentPicker))
+        userIMG2.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func presentPicker() {
+        let picker = UIImagePickerController()
+        picker.sourceType = .photoLibrary
+        picker.allowsEditing = true
+        picker.delegate = self
+        self.present(picker, animated: true, completion: nil)
     }
     
     // Validate the fields. If everything is correct, this method returns nil or error message otherwise.
@@ -77,7 +95,17 @@ class signupViewController: UIViewController {
         self.view.window?.makeKeyAndVisible()
     }
     
+    
     @IBAction func signupTapped(_ sender: Any) {
+        
+        guard let imageSelected = self.image else {
+            print("Avatar is nil")
+            return
+        }
+        
+        guard let imageData = imageSelected.jpegData(compressionQuality: 0.4) else {
+            return
+        }
         
         // Validate the fields
         let errorMessage = validateFieldd()
@@ -90,15 +118,31 @@ class signupViewController: UIViewController {
             let email = emailTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let username = usernameTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
             let password = passwordTF2.text!.trimmingCharacters(in: .whitespacesAndNewlines)
+            let profileImageURL: String! = ""
             
             // Create the user
             Auth.auth().createUser(withEmail: email, password: password) { (result, err) in
                 if err != nil {
                     self.showError("Error creating user")
                 } else {
-                    let db = Firestore.firestore()
+                    let storageRef = Storage.storage().reference(forURL: "gs://gouge-54305.appspot.com")
+                    let storageProfileRef = storageRef.child("user_profile_image").child(result!.user.uid)
+                    let metadata = StorageMetadata()
+                    metadata.contentType = "image/jpg"
+                    storageProfileRef.putData(imageData, metadata: metadata) { (StorageMetaData, error) in
+                        if error != nil {
+                            return
+                        }
+                        storageProfileRef.downloadURL { (url, error) in
+                            if let metaImageUrl = url?.absoluteString {
+                                UserDefaults.standard.set(metaImageUrl, forKey: "profileIMG")
+                                
+                            }
+                        }
+                    }
                     
-                    db.collection("users").document(result!.user.uid).setData(["firstName": firstName, "lastName": lastName, "username": username, "uid": result!.user.uid]) { (error) in
+                    let db = Firestore.firestore()
+                    db.collection("users").document(result!.user.uid).setData(["firstName": firstName, "lastName": lastName, "username": username, "uid": result!.user.uid, "profileImageURL": profileImageURL!]) { (error) in
                         if error != nil {
                             self.showError("Error saving user profiles.")
                         } else {
@@ -109,6 +153,21 @@ class signupViewController: UIViewController {
             }
         }
     }
-    
-
 }
+
+extension signupViewController: UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let imageSelected = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            image = imageSelected
+            userIMG2.image = imageSelected
+        }
+    
+        if let imageOriginal = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            image = imageOriginal
+            userIMG2.image = imageOriginal
+        }
+        
+        picker.dismiss(animated: true, completion: nil)
+    }
+}
+

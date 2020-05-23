@@ -46,8 +46,9 @@ class thirdViewController: UIViewController {
                 let username = data["username"] as? String ?? "Anonymous"
                 let uid = data["uid"] as? String ?? "Anonymous"
                 let email = Auth.auth().currentUser?.email ?? "Anonymous"
+                let profileImageURL = data["profileImageURL"] as? String ?? "Anonymous"
                 
-                let newUser = User(firstName: firstname, lastName: lastname, username: username, uid: uid, email: email)
+                let newUser = User(firstName: firstname, lastName: lastname, username: username, uid: uid, email: email, profileImageURL: profileImageURL)
                 self.usernameLB6.text = newUser.username
                 self.firstnameLB6.text = newUser.firstName
                 self.lastnameLB6.text = newUser.lastName

@@ -14,13 +14,15 @@ class User {
     private(set) var username: String!
     private(set) var uid: String!
     private(set) var email: String!
+    private(set) var profileImageURL: String!
     
-    init(firstName: String!, lastName: String!, username: String!, uid: String!, email: String!) {
+    init(firstName: String!, lastName: String!, username: String!, uid: String!, email: String!, profileImageURL: String!) {
         self.firstName = firstName
         self.lastName = lastName
         self.username = username
         self.uid = uid
         self.email = email
+        self.profileImageURL = profileImageURL
     }
     
     func return_firstName() -> String {
@@ -41,6 +43,10 @@ class User {
     
     func return_email() -> String {
         return self.email
+    }
+    
+    func return_profileImageURL() -> String {
+        return self.profileImageURL
     }
     
 }
