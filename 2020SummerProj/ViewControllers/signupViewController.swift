@@ -99,7 +99,7 @@ class signupViewController: UIViewController {
     @IBAction func signupTapped(_ sender: Any) {
         
         guard let imageSelected = self.image else {
-            print("Avatar is nil")
+            showError("Please select a profile image")
             return
         }
         
