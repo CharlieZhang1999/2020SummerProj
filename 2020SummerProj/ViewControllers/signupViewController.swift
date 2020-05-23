@@ -19,9 +19,11 @@ class signupViewController: UIViewController {
     @IBOutlet weak var passwordTF2: UITextField!
     @IBOutlet weak var signupBT2: UIButton!
     @IBOutlet weak var errorLB2: UILabel!
+    @IBOutlet weak var userIMG2: UIImageView!
     
     func configure() {
         errorLB2.alpha = 0
+        userIMG2.layer.cornerRadius = userIMG2.frame.size.width / 2
         Utilities.styleTextField(firstnameTF2)
         Utilities.styleTextField(lastnameTF2)
         Utilities.styleTextField(emailTF2)
@@ -95,14 +97,14 @@ class signupViewController: UIViewController {
                     self.showError("Error creating user")
                 } else {
                     let db = Firestore.firestore()
-                    db.collection("users").addDocument(data: ["firstName": firstName, "lastName": lastName, "username": username, "uid": result!.user.uid]) { (error) in
+                    
+                    db.collection("users").document(result!.user.uid).setData(["firstName": firstName, "lastName": lastName, "username": username, "uid": result!.user.uid]) { (error) in
                         if error != nil {
-                            // Account has been created, but the profile can't be saved in the database
                             self.showError("Error saving user profiles.")
+                        } else {
+                            self.transitionToLoginView()
                         }
                     }
-                    // Transition to the home screen
-                    self.transitionToLoginView()
                 }
             }
         }

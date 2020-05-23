@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		70C9D88F2B17A651DE929158 /* Pods_2020SummerProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED73196CB19A5CAB0F3EFF /* Pods_2020SummerProjTests.framework */; };
 		90E76B82B1904E89A7AA7CE3 /* Pods_2020SummerProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D1A44A9453D4EB81F03C4 /* Pods_2020SummerProj.framework */; };
+		9F63FB432478810E00CA2ABA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F63FB422478810E00CA2ABA /* User.swift */; };
 		9F88AFE92476588B001BEA12 /* homepageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88AFE82476588B001BEA12 /* homepageViewController.swift */; };
 		9F88AFEB247658C0001BEA12 /* firstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88AFEA247658C0001BEA12 /* firstViewController.swift */; };
 		9F88AFED247658CB001BEA12 /* secondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9F88AFEC247658CB001BEA12 /* secondViewController.swift */; };
@@ -51,6 +52,7 @@
 /* Begin PBXFileReference section */
 		58474411ADC00EC2B92F8B02 /* Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; path = "Target Support Files/Pods-2020SummerProj-2020SummerProjUITests/Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; sourceTree = "<group>"; };
 		752BC1B8AFCCEFF5000C0C4D /* Pods_2020SummerProj_2020SummerProjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2020SummerProj_2020SummerProjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9F63FB422478810E00CA2ABA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		9F88AFE82476588B001BEA12 /* homepageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = homepageViewController.swift; sourceTree = "<group>"; };
 		9F88AFEA247658C0001BEA12 /* firstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstViewController.swift; sourceTree = "<group>"; };
 		9F88AFEC247658CB001BEA12 /* secondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = secondViewController.swift; sourceTree = "<group>"; };
@@ -136,6 +138,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		9F63FB41247880F500CA2ABA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				9F63FB422478810E00CA2ABA /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		9FCC246F24758A9A009B0E35 /* Media */ = {
 			isa = PBXGroup;
 			children = (
@@ -169,6 +179,7 @@
 		9FDF146B2474AA7600A0C727 /* 2020SummerProj */ = {
 			isa = PBXGroup;
 			children = (
+				9F63FB41247880F500CA2ABA /* Model */,
 				9FCC246F24758A9A009B0E35 /* Media */,
 				9FDF14A52474AD5E00A0C727 /* Helpers */,
 				9FDF149C2474AABF00A0C727 /* ViewControllers */,
@@ -476,6 +487,7 @@
 				9FDF149E2474AAEA00A0C727 /* initialViewController.swift in Sources */,
 				9FDF14A22474AAFE00A0C727 /* signupViewController.swift in Sources */,
 				9FDF14A72474AD6800A0C727 /* Utilities.swift in Sources */,
+				9F63FB432478810E00CA2ABA /* User.swift in Sources */,
 				9FDF14A02474AAF400A0C727 /* loginViewController.swift in Sources */,
 				9FCC246E24757FB1009B0E35 /* Constants.swift in Sources */,
 			);
