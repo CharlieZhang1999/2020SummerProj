@@ -65,8 +65,7 @@ class initialViewController: UIViewController {
         view.layer.insertSublayer(videoPlayerLayer!, at: 0)
     
         // Add it to the view and play it
-        videoPlayer?.playImmediately(atRate: 1)
-        
+        videoPlayer?.playImmediately(atRate: 0.6)
         
     }
 }

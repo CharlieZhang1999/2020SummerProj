@@ -142,7 +142,7 @@ class signupViewController: UIViewController {
                     }
                     
                     let db = Firestore.firestore()
-                    db.collection("users").document(result!.user.uid).setData(["firstName": firstName, "lastName": lastName, "username": username, "uid": result!.user.uid, "profileImageURL": profileImageURL!]) { (error) in
+                    db.collection("users").document(result!.user.uid).setData(["emailAddress": email, "firstName": firstName, "lastName": lastName, "userName": username, "uid": result!.user.uid, "profileImageURL": profileImageURL!]) { (error) in
                         if error != nil {
                             self.showError("Error saving user profiles.")
                         } else {
