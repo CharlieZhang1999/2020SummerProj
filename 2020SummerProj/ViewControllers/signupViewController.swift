@@ -32,6 +32,7 @@ class signupViewController: UIViewController {
     
     func configure() {
         errorLB2.alpha = 0
+        Utilities.styleRoundedAvatar(userIMG2)
         Utilities.styleTextField(firstnameTF2)
         Utilities.styleTextField(lastnameTF2)
         Utilities.styleTextField(emailTF2)
@@ -41,7 +42,6 @@ class signupViewController: UIViewController {
     }
     
     func setUpUserImg() {
-        userIMG2.layer.cornerRadius = userIMG2.frame.size.width / 2
         userIMG2.isUserInteractionEnabled = true
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(presentPicker))
         userIMG2.addGestureRecognizer(tapGesture)
@@ -56,7 +56,7 @@ class signupViewController: UIViewController {
     }
     
     // Validate the fields. If everything is correct, this method returns nil or error message otherwise.
-    func validateFieldd() -> String? {
+    func validateField() -> String? {
         
         // Check that all fields are non-empty
         if firstnameTF2.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" ||
@@ -108,7 +108,7 @@ class signupViewController: UIViewController {
         }
         
         // Validate the fields
-        let errorMessage = validateFieldd()
+        let errorMessage = validateField()
         if errorMessage != nil {
             showError(errorMessage!)
         } else {

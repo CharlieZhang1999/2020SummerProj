@@ -35,8 +35,8 @@ class thirdViewController: UIViewController {
     
     
     func configure() {
-        profileIMG6.layer.cornerRadius = profileIMG6.frame.size.width / 2
         errorLB6.alpha = 0
+        Utilities.styleRoundedAvatar(profileIMG6)
         Utilities.styleHollowButton(saveBT6)
     }
     
