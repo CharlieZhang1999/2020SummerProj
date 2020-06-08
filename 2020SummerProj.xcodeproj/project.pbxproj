@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D65BCEA248ECCBE00406FBD /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65BCE9248ECCBE00406FBD /* FriendCell.swift */; };
+		1D65BCEC248ECEA800406FBD /* FriendCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65BCEB248ECEA800406FBD /* FriendCellInfo.swift */; };
+		1D65BCEE248ECFC600406FBD /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65BCED248ECFC600406FBD /* FriendListViewController.swift */; };
 		2C04550024838F6100997854 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0454FF24838F6100997854 /* TableViewController.swift */; };
 		70C9D88F2B17A651DE929158 /* Pods_2020SummerProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED73196CB19A5CAB0F3EFF /* Pods_2020SummerProjTests.framework */; };
 		90E76B82B1904E89A7AA7CE3 /* Pods_2020SummerProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D1A44A9453D4EB81F03C4 /* Pods_2020SummerProj.framework */; };
@@ -52,6 +55,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D65BCE9248ECCBE00406FBD /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
+		1D65BCEB248ECEA800406FBD /* FriendCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellInfo.swift; sourceTree = "<group>"; };
+		1D65BCED248ECFC600406FBD /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
 		2C0454FF24838F6100997854 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		58474411ADC00EC2B92F8B02 /* Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; path = "Target Support Files/Pods-2020SummerProj-2020SummerProjUITests/Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; sourceTree = "<group>"; };
 		752BC1B8AFCCEFF5000C0C4D /* Pods_2020SummerProj_2020SummerProjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2020SummerProj_2020SummerProjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -229,6 +235,9 @@
 				2C0454FF24838F6100997854 /* TableViewController.swift */,
 				9F88AFEE247658D6001BEA12 /* profileViewController.swift */,
 				9F97C52E248C44B9007F269D /* fourthViewController.swift */,
+				1D65BCEB248ECEA800406FBD /* FriendCellInfo.swift */,
+				1D65BCE9248ECCBE00406FBD /* FriendCell.swift */,
+				1D65BCED248ECFC600406FBD /* FriendListViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -485,7 +494,10 @@
 			files = (
 				9F88AFEB247658C0001BEA12 /* firstViewController.swift in Sources */,
 				2C04550024838F6100997854 /* TableViewController.swift in Sources */,
+				1D65BCEE248ECFC600406FBD /* FriendListViewController.swift in Sources */,
+				1D65BCEC248ECEA800406FBD /* FriendCellInfo.swift in Sources */,
 				9FDF14712474AA7600A0C727 /* ViewController.swift in Sources */,
+				1D65BCEA248ECCBE00406FBD /* FriendCell.swift in Sources */,
 				9F88AFE92476588B001BEA12 /* homepageViewController.swift in Sources */,
 				9F88AFEF247658D6001BEA12 /* profileViewController.swift in Sources */,
 				9F97C52F248C44B9007F269D /* fourthViewController.swift in Sources */,
