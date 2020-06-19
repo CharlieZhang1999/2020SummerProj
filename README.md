@@ -15,7 +15,8 @@
      pod init
      ```
 3. Add the dependencies to the Podfile <br />
-"
+<br />
+"<br />
 pod 'Firebase/Analytics'<br />
 pod 'Firebase/Auth'<br />
 pod 'Firebase/Firestore'<br />
