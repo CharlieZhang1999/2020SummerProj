@@ -14,13 +14,13 @@
      ```
      pod init
      ```
-3. Add the dependencies to the Podfile
+3. Add the dependencies to the Podfile <br />
 "
-pod 'Firebase/Analytics'
-pod 'Firebase/Auth'
-pod 'Firebase/Firestore'
-pod 'Firebase/Storage'
-pod 'MessageKit'
+pod 'Firebase/Analytics'<br />
+pod 'Firebase/Auth'<br />
+pod 'Firebase/Firestore'<br />
+pod 'Firebase/Storage'<br />
+pod 'MessageKit'<br />
 "
 4. Install new pods in your project
      ```
