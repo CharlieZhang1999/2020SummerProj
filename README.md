@@ -22,6 +22,7 @@
      pod 'Firebase/Firestore'<br />
      pod 'Firebase/Storage'<br />
      pod 'MessageKit'<br />
+     pod 'SDWebImage'<br />
      
      "
 
