@@ -22,6 +22,7 @@
      pod 'Firebase/Firestore'<br />
      pod 'Firebase/Storage'<br />
      pod 'MessageKit'<br />
+     
      "
 
 4. Install new pods in your project
