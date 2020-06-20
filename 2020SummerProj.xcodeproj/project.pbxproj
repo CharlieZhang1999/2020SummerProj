@@ -7,9 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1D4D1FBD249D6F2300BA8455 /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D1FBC249D6F2300BA8455 /* Chat.swift */; };
+		1D4D1FBF249D735C00BA8455 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D1FBE249D735C00BA8455 /* Message.swift */; };
+		1D4D1FC1249DC97100BA8455 /* NewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D1FC0249DC97100BA8455 /* NewMessageViewController.swift */; };
+		1D4D1FC5249DCB1E00BA8455 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D1FC4249DCB1E00BA8455 /* UserCell.swift */; };
+		1D4D1FC7249DCD9B00BA8455 /* UserCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D4D1FC6249DCD9B00BA8455 /* UserCellInfo.swift */; };
 		1D65BCEA248ECCBE00406FBD /* FriendCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65BCE9248ECCBE00406FBD /* FriendCell.swift */; };
 		1D65BCEC248ECEA800406FBD /* FriendCellInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65BCEB248ECEA800406FBD /* FriendCellInfo.swift */; };
 		1D65BCEE248ECFC600406FBD /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65BCED248ECFC600406FBD /* FriendListViewController.swift */; };
+		1D65BCF024956DDC00406FBD /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D65BCEF24956DDC00406FBD /* ChatViewController.swift */; };
 		2C04550024838F6100997854 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0454FF24838F6100997854 /* TableViewController.swift */; };
 		70C9D88F2B17A651DE929158 /* Pods_2020SummerProjTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6ED73196CB19A5CAB0F3EFF /* Pods_2020SummerProjTests.framework */; };
 		90E76B82B1904E89A7AA7CE3 /* Pods_2020SummerProj.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C56D1A44A9453D4EB81F03C4 /* Pods_2020SummerProj.framework */; };
@@ -55,9 +61,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1D4D1FBC249D6F2300BA8455 /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		1D4D1FBE249D735C00BA8455 /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		1D4D1FC0249DC97100BA8455 /* NewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMessageViewController.swift; sourceTree = "<group>"; };
+		1D4D1FC4249DCB1E00BA8455 /* UserCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		1D4D1FC6249DCD9B00BA8455 /* UserCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCellInfo.swift; sourceTree = "<group>"; };
 		1D65BCE9248ECCBE00406FBD /* FriendCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCell.swift; sourceTree = "<group>"; };
 		1D65BCEB248ECEA800406FBD /* FriendCellInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendCellInfo.swift; sourceTree = "<group>"; };
 		1D65BCED248ECFC600406FBD /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		1D65BCEF24956DDC00406FBD /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		2C0454FF24838F6100997854 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
 		58474411ADC00EC2B92F8B02 /* Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; path = "Target Support Files/Pods-2020SummerProj-2020SummerProjUITests/Pods-2020SummerProj-2020SummerProjUITests.release.xcconfig"; sourceTree = "<group>"; };
 		752BC1B8AFCCEFF5000C0C4D /* Pods_2020SummerProj_2020SummerProjUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_2020SummerProj_2020SummerProjUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -238,6 +250,12 @@
 				1D65BCEB248ECEA800406FBD /* FriendCellInfo.swift */,
 				1D65BCE9248ECCBE00406FBD /* FriendCell.swift */,
 				1D65BCED248ECFC600406FBD /* FriendListViewController.swift */,
+				1D65BCEF24956DDC00406FBD /* ChatViewController.swift */,
+				1D4D1FBC249D6F2300BA8455 /* Chat.swift */,
+				1D4D1FBE249D735C00BA8455 /* Message.swift */,
+				1D4D1FC0249DC97100BA8455 /* NewMessageViewController.swift */,
+				1D4D1FC4249DCB1E00BA8455 /* UserCell.swift */,
+				1D4D1FC6249DCD9B00BA8455 /* UserCellInfo.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -492,18 +510,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1D4D1FC7249DCD9B00BA8455 /* UserCellInfo.swift in Sources */,
 				9F88AFEB247658C0001BEA12 /* firstViewController.swift in Sources */,
 				2C04550024838F6100997854 /* TableViewController.swift in Sources */,
 				1D65BCEE248ECFC600406FBD /* FriendListViewController.swift in Sources */,
 				1D65BCEC248ECEA800406FBD /* FriendCellInfo.swift in Sources */,
 				9FDF14712474AA7600A0C727 /* ViewController.swift in Sources */,
+				1D4D1FC1249DC97100BA8455 /* NewMessageViewController.swift in Sources */,
 				1D65BCEA248ECCBE00406FBD /* FriendCell.swift in Sources */,
+				1D4D1FBF249D735C00BA8455 /* Message.swift in Sources */,
 				9F88AFE92476588B001BEA12 /* homepageViewController.swift in Sources */,
 				9F88AFEF247658D6001BEA12 /* profileViewController.swift in Sources */,
 				9F97C52F248C44B9007F269D /* fourthViewController.swift in Sources */,
+				1D4D1FC5249DCB1E00BA8455 /* UserCell.swift in Sources */,
 				9F88AFED247658CB001BEA12 /* secondViewController.swift in Sources */,
 				9FDF146D2474AA7600A0C727 /* AppDelegate.swift in Sources */,
+				1D65BCF024956DDC00406FBD /* ChatViewController.swift in Sources */,
 				9FDF146F2474AA7600A0C727 /* SceneDelegate.swift in Sources */,
+				1D4D1FBD249D6F2300BA8455 /* Chat.swift in Sources */,
 				9FDF149E2474AAEA00A0C727 /* initialViewController.swift in Sources */,
 				9FDF14A22474AAFE00A0C727 /* signupViewController.swift in Sources */,
 				9FDF14A72474AD6800A0C727 /* Utilities.swift in Sources */,

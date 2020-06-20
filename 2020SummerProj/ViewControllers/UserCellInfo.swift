@@ -1,20 +1,19 @@
 //
-//  FriendCellInfo.swift
+//  UserCellInfo.swift
 //  2020SummerProj
 //
-//  Created by 薛凡 on 6/8/20.
+//  Created by 薛凡 on 6/19/20.
 //  Copyright © 2020 香槟最靓的仔. All rights reserved.
 //
+
 import UIKit
 
-class FriendCellInfo {
+class UserCellInfo {
     
-    var image: UIImage
     var title: String
     
-    init(image: UIImage, title: String) {
+    init(title: String) {
         
-        self.image = image
         self.title = title
         
     }

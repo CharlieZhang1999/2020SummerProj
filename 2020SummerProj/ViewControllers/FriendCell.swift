@@ -17,6 +17,9 @@ class FriendCell: UITableViewCell {
     // Cell configuration
     func setFriendInfo(info: FriendCellInfo) {
         
+        FriendImageView.layer.masksToBounds = true
+        FriendImageView.layer.cornerRadius = FriendImageView.bounds.width / 2
+        
         FriendImageView.image = info.image
         
         FriendNameLabel.text = info.title

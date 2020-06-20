@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class FriendListViewController: UIViewController {
     
@@ -18,10 +19,13 @@ class FriendListViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // load all the images and labels on on to the table cell
         info = createArray()
         
+        // show the table view
         TableView.delegate = self
         TableView.dataSource = self
+        
     }
     
     // Create Friend Cell Info object array
