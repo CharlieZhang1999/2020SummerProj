@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		2C04550024838F6100997854 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0454FF24838F6100997854 /* TableViewController.swift */; };
+		2C9AEC2A24AA78D5009B40E2 /* ItemCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C9AEC2724AA78D4009B40E2 /* ItemCollectionViewCell.xib */; };
+		2C9AEC2B24AA78D5009B40E2 /* ImageViewerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AEC2824AA78D4009B40E2 /* ImageViewerViewController.swift */; };
+		2C9AEC2C24AA78D5009B40E2 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AEC2924AA78D4009B40E2 /* ItemCollectionViewCell.swift */; };
 		4111703B2492B4D0007124D9 /* DemoTableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411170392492B4D0007124D9 /* DemoTableTableViewCell.swift */; };
 		4111703C2492B4D0007124D9 /* DemoTableTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4111703A2492B4D0007124D9 /* DemoTableTableViewCell.xib */; };
 		4111703E2492B4F9007124D9 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4111703D2492B4F9007124D9 /* HistoryViewController.swift */; };
@@ -57,6 +60,9 @@
 
 /* Begin PBXFileReference section */
 		2C0454FF24838F6100997854 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		2C9AEC2724AA78D4009B40E2 /* ItemCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCollectionViewCell.xib; sourceTree = "<group>"; };
+		2C9AEC2824AA78D4009B40E2 /* ImageViewerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageViewerViewController.swift; sourceTree = "<group>"; };
+		2C9AEC2924AA78D4009B40E2 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		411170392492B4D0007124D9 /* DemoTableTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DemoTableTableViewCell.swift; sourceTree = "<group>"; };
 		4111703A2492B4D0007124D9 /* DemoTableTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DemoTableTableViewCell.xib; sourceTree = "<group>"; };
 		4111703D2492B4F9007124D9 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
@@ -196,6 +202,9 @@
 				9FDF14A52474AD5E00A0C727 /* Helpers */,
 				9FDF149C2474AABF00A0C727 /* ViewControllers */,
 				9FDF146C2474AA7600A0C727 /* AppDelegate.swift */,
+				2C9AEC2824AA78D4009B40E2 /* ImageViewerViewController.swift */,
+				2C9AEC2924AA78D4009B40E2 /* ItemCollectionViewCell.swift */,
+				2C9AEC2724AA78D4009B40E2 /* ItemCollectionViewCell.xib */,
 				9FDF146E2474AA7600A0C727 /* SceneDelegate.swift */,
 				9FDF14702474AA7600A0C727 /* ViewController.swift */,
 				411170392492B4D0007124D9 /* DemoTableTableViewCell.swift */,
@@ -366,6 +375,7 @@
 				9FDF14792474AA7700A0C727 /* LaunchScreen.storyboard in Resources */,
 				9F97C52D248C4266007F269D /* video.mp4 in Resources */,
 				9FCDE4C32474B3F2009F46F3 /* GoogleService-Info.plist in Resources */,
+				2C9AEC2A24AA78D5009B40E2 /* ItemCollectionViewCell.xib in Resources */,
 				9FDF14762474AA7700A0C727 /* Assets.xcassets in Resources */,
 				9FDF14742474AA7600A0C727 /* Main.storyboard in Resources */,
 				4111703C2492B4D0007124D9 /* DemoTableTableViewCell.xib in Resources */,
@@ -496,10 +506,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C9AEC2B24AA78D5009B40E2 /* ImageViewerViewController.swift in Sources */,
 				9F88AFEB247658C0001BEA12 /* firstViewController.swift in Sources */,
 				2C04550024838F6100997854 /* TableViewController.swift in Sources */,
 				9FDF14712474AA7600A0C727 /* ViewController.swift in Sources */,
 				9F88AFE92476588B001BEA12 /* homepageViewController.swift in Sources */,
+				2C9AEC2C24AA78D5009B40E2 /* ItemCollectionViewCell.swift in Sources */,
 				9F88AFEF247658D6001BEA12 /* profileViewController.swift in Sources */,
 				9F97C52F248C44B9007F269D /* fourthViewController.swift in Sources */,
 				9F88AFED247658CB001BEA12 /* secondViewController.swift in Sources */,
