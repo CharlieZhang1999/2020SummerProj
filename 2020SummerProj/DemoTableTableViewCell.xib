@@ -42,9 +42,9 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="myButton" destination="oqb-W1-IRb" id="m0V-RU-2R1"/>
-                <outlet property="myImageview" destination="eb8-Tt-lxR" id="nqy-pT-hO8"/>
-                <outlet property="mypricelabel" destination="Ta9-Db-pCZ" id="JVm-Af-7hb"/>
+                <outlet property="cellButton" destination="oqb-W1-IRb" id="kRE-HL-9Z4"/>
+                <outlet property="cellImageview" destination="eb8-Tt-lxR" id="Jyy-tm-YbY"/>
+                <outlet property="cellpricelabel" destination="Ta9-Db-pCZ" id="3HO-hJ-EO6"/>
             </connections>
             <point key="canvasLocation" x="197.10144927536234" y="136.27232142857142"/>
         </tableViewCell>

@@ -8,50 +8,61 @@
 
 import UIKit
 
+class Product {
+    var productTitle: String = ""
+    var productDescription: String = ""
+    var purchaseDate: String = ""
+    var productPrice: Double = 0
+    var productImages: [String] = [""]
+    init(name: String, description: String, price: Double, date: String, images: [String]) {
+        productTitle = name
+        productDescription = description
+        purchaseDate = date
+        productPrice = price
+        productImages = images
+    }
+}
 class HistoryViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    @IBOutlet var tableView: UITableView!
-        var productcellarray: [DemoTableTableViewCell] = []
-        let purchases = [
-            ("Porsche 911", 20.0),
-            ("Aston Martin DB9", 10.0),
-            ("Ferrari F12", 50.0)
-        ]
-        
-        let selling = [
-            ("Benz S-class", 30.0),
-            ("Benz G500", 28.0)
-        ]
+        @IBOutlet var tableView: UITableView!
+        var productarray: [Product] = []
+        var data = [
+                    ("Aston Martin DB9", "The best British car", 10.0, "06-10"),
+                    ("Ferrari F12", "Made in Italy.", 50.0, "06-10"),
+                    ("Benz S-class","Made in Germany. Condition: Well", 30.0, "06-10"),
+                    ("Benz G500", "Made in Germany", 28.0, "06-10")
+                ]
+                    /*("Aston Martin DB9", 10.0),
+                    ("Ferrari F12", 50.0),
+                    ("Benz S-class", 30.0),
+                    ("Benz G500", 28.0)
+                ]*/
+            
+        var imagedata = [
+                ["Aston Martin DB9", "Aston Martin DB9_1"],
+                ["Ferrari F12"],
+                ["Benz S-class"],
+                ["Benz G500", "Benz G500_1", "Benz G500_2"]
+            ]
         
         func numberOfSections(in tableView: UITableView) -> Int {
-            return 2
+            return 1
         }
         
         func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-            if(section == 0){
-                return purchases.count
-            }
-            else{
-                return selling.count
-            }
+            return data.count
         }
 
 
         
         
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+            var (productname, productdescription, productprice, productdate) = data[indexPath.row]
+            var productimages = imagedata[indexPath.row]
+            var product = Product(name: productname, description: productdescription, price: productprice, date: productdate, images: productimages)
+            productarray.append(product)
+            
             var cell = tableView.dequeueReusableCell(withIdentifier: DemoTableTableViewCell.identifier, for: indexPath) as! DemoTableTableViewCell
-            if(indexPath.section == 0){
-                var (purchasename, purchaseprice) = purchases[indexPath.row]
-                //cell.delegate = self
-                cell.configure(with: purchasename, imageName: purchasename, price: purchaseprice, section: indexPath.section)
-                productcellarray.append(cell)
-            }
-            else{
-                var (sellingname, sellingprice) = selling[indexPath.row]
-                //cell.delegate = self
-                cell.configure(with: sellingname, imageName: sellingname, price: sellingprice, section: indexPath.section)
-                productcellarray.append(cell)
-            }
+            cell.configure(with: productname, imageName: productimages, price: productprice, date: productdate)
             return cell
         }
         
@@ -59,7 +70,12 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
             return 110
         }
-        
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+            if(editingStyle == .delete){
+                self.data.remove(at: indexPath.row)
+                self.tableView.reloadData()
+            }
+        }
         
         func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
             performSegue(withIdentifier: "showdetail", sender: self)
@@ -67,7 +83,7 @@ class HistoryViewController: UIViewController, UITableViewDataSource, UITableVie
         
         override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
             if let destination = segue.destination as? HistoryDetailViewController{
-                destination.myproduct = productcellarray[(tableView.indexPathForSelectedRow?.row)!]
+                destination.myproduct = productarray[(tableView.indexPathForSelectedRow?.row)!]
                 tableView.deselectRow(at: tableView.indexPathForSelectedRow!, animated: true)
             }
         }

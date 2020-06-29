@@ -14,14 +14,14 @@ import UIKit
 
 class DemoTableTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var myImageview: UIImageView!
-    @IBOutlet weak var myButton: UIButton!
+    @IBOutlet weak var cellImageview: UIImageView!
+    @IBOutlet weak var cellButton: UIButton!
     //weak var delegate: DemoTableTableViewCellDelegate?
-    @IBOutlet weak var mypricelabel: UILabel!
-    var mytitle: String = ""
-    var myprice: Double = 0
-    var mysection: Int = 0
-    
+    @IBOutlet weak var cellpricelabel: UILabel!
+    var celltitle: String = ""
+    var cellprice: Double = 0
+    var cellimages: [String] = [""]
+    var celldate: String = ""
 
     static let identifier = "DemoTableTableViewCell"
     override func awakeFromNib() {
@@ -32,13 +32,15 @@ class DemoTableTableViewCell: UITableViewCell {
     static func nib() -> UINib {
         return UINib(nibName: "DemoTableTableViewCell", bundle: nil)
     }
-    func configure(with title: String, imageName: String, price: Double, section: Int){//this is like a init function
-        mytitle = title
-        mysection = section
-        myprice = price
-        mypricelabel.text = "\(myprice)$"
-        myButton.setTitle(mytitle, for: .normal)
-        myImageview.image = UIImage(named: imageName)
+    func configure(with title: String, imageName: [String], price: Double, date: String){//this is like a init function
+        celltitle = title
+        celldate = date
+        cellprice = price
+        cellpricelabel.text = "\(cellprice)$"
+        cellButton.setTitle(celltitle, for: .normal)
+        cellimages = imageName
+        cellImageview.image = UIImage(named: cellimages[0])//only use the first picture for the cover
+
     }
 /*    @IBAction func didTapButton(_ sender: UIButton) {
         delegate?.didTapButton(with: section)
