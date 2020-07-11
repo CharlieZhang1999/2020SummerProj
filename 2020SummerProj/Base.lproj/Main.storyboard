@@ -908,7 +908,7 @@
         <scene sceneID="Mg4-ZG-BaE">
             <objects>
                 <viewController id="cCQ-p0-qhp" customClass="firstViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="884-W6-gYD">
+                    <view key="view" contentMode="scaleToFill" id="884-W6-gYD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -917,7 +917,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </mapView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-Fk-HtX">
-                                <rect key="frame" x="0.0" y="163" width="414" height="733"/>
+                                <rect key="frame" x="0.0" y="163" width="414" height="650"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="414" id="nfb-1g-69c"/>
@@ -954,6 +954,9 @@
                                 <rect key="frame" x="20" y="103" width="374" height="44"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                                <connections>
+                                    <outlet property="delegate" destination="cCQ-p0-qhp" id="Sms-Xd-CYg"/>
+                                </connections>
                             </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -963,7 +966,6 @@
                             <constraint firstItem="4ZX-07-eKa" firstAttribute="bottom" secondItem="lXe-Fk-HtX" secondAttribute="bottom" id="WZC-bq-dOj"/>
                             <constraint firstItem="njX-1E-uWa" firstAttribute="width" secondItem="lXe-Fk-HtX" secondAttribute="width" id="hRg-qW-NsR"/>
                             <constraint firstItem="lXe-Fk-HtX" firstAttribute="leading" secondItem="4ZX-07-eKa" secondAttribute="leading" id="sz0-58-hXe"/>
-                            <constraint firstItem="njX-1E-uWa" firstAttribute="height" secondItem="lXe-Fk-HtX" secondAttribute="height" id="zSt-Iu-l1h"/>
                             <constraint firstItem="4ZX-07-eKa" firstAttribute="trailing" secondItem="lXe-Fk-HtX" secondAttribute="trailing" id="ziG-Qs-rpD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4ZX-07-eKa"/>
