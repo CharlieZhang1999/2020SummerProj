@@ -25,6 +25,7 @@
 //
 
 import UIKit
+import MapKit
 
 struct Item {
     var itemName: String
@@ -33,18 +34,25 @@ struct Item {
 }
 class firstViewController: UIViewController {
 
+    @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     let cellidentifier = "ItemCollectionViewCell"
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
-    var page: Int!
+    //var page: Int!
     
     @IBAction func SegControl(_ sender: UISegmentedControl) {
-        page = sender.selectedSegmentIndex
+        if sender.selectedSegmentIndex == 0 {
+            collectionView.isHidden = false
+            mapView.isHidden = true
+        } else {
+            collectionView.isHidden = true
+            mapView.isHidden = false
+        }
     }
     
-    var items:[Item] = [Item(itemName: "5W USB Official OEM Charger and Power", price: 19.9, imageName: "1"),
+    var data:[Item] = [Item(itemName: "5W USB Official OEM Charger and Power", price: 19.9, imageName: "1"),
                         Item(itemName: "Fire 7 Tablet - Black", price: 49.99, imageName: "2"),
                         Item(itemName: "Alexa Voice Remote", price: 39.99, imageName: "3"),
                         Item(itemName: "Echo Dot (3rd Gen)", price: 49.99, imageName: "4"),
@@ -52,10 +60,14 @@ class firstViewController: UIViewController {
                         Item(itemName: "CROC Classic Clog", price: 25.49, imageName: "6"),
                         Item(itemName: "Polarized Aviator Sunglasses", price: 16.99, imageName: "7"),
                         Item(itemName: "Remington R5000 Series Electric Rotary Shaver", price: 80.0, imageName: "8")]
+    var items:[Item]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         setupCollectionView()
+        mapView.isHidden = true
+        items = data
     }
     
     private func setupCollectionView() {
@@ -101,6 +113,12 @@ class firstViewController: UIViewController {
             collectionViewFlowLayout.minimumInteritemSpacing = interItemSpacing
             collectionView.setCollectionViewLayout(collectionViewFlowLayout, animated: true)
         }
+    }
+}
+
+extension firstViewController: UISearchBarDelegate {
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        
     }
 }
 

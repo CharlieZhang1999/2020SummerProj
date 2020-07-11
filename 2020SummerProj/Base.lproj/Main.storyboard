@@ -908,82 +908,77 @@
         <scene sceneID="Mg4-ZG-BaE">
             <objects>
                 <viewController id="cCQ-p0-qhp" customClass="firstViewController" customModule="_020SummerProj" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="884-W6-gYD">
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="884-W6-gYD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" scrollEnabled="NO" pagingEnabled="YES" id="bIq-oy-fku">
-                                <rect key="frame" x="0.0" y="159" width="414" height="737"/>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="njX-1E-uWa">
+                                <rect key="frame" x="0.0" y="163" width="414" height="733"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PhH-x2-83g">
-                                        <rect key="frame" x="0.0" y="34" width="414" height="688"/>
-                                        <subviews>
-                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-Fk-HtX">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="688"/>
-                                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="414" id="nfb-1g-69c"/>
-                                                </constraints>
-                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4am-Wo-sz0">
-                                                    <size key="itemSize" width="128" height="128"/>
-                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                </collectionViewFlowLayout>
-                                                <cells>
-                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="w0B-st-GHl">
-                                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K9m-dh-5Zg">
-                                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
-                                                            <autoresizingMask key="autoresizingMask"/>
-                                                        </collectionViewCellContentView>
-                                                    </collectionViewCell>
-                                                </cells>
-                                            </collectionView>
-                                        </subviews>
-                                    </stackView>
-                                </subviews>
-                                <viewLayoutGuide key="contentLayoutGuide" id="gKF-OL-LYb"/>
-                                <viewLayoutGuide key="frameLayoutGuide" id="x9R-Jz-I6H"/>
-                            </scrollView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXd-MK-dsW">
-                                <rect key="frame" x="20" y="103" width="374" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
-                            </searchBar>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ruX-Af-kMp">
-                                <rect key="frame" x="142" y="750" width="131" height="31"/>
+                            </mapView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lXe-Fk-HtX">
+                                <rect key="frame" x="0.0" y="163" width="414" height="733"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="414" id="nfb-1g-69c"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="4am-Wo-sz0">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="w0B-st-GHl">
+                                        <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="K9m-dh-5Zg">
+                                            <rect key="frame" x="0.0" y="0.0" width="128" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="ruX-Af-kMp">
+                                <rect key="frame" x="142" y="750" width="131" height="32"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <segments>
-                                    <segment title="First"/>
-                                    <segment title="Second"/>
+                                    <segment title="Grid"/>
+                                    <segment title="Map"/>
                                 </segments>
                                 <connections>
                                     <action selector="SegControl:" destination="cCQ-p0-qhp" eventType="valueChanged" id="BJi-hu-65G"/>
                                 </connections>
                             </segmentedControl>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KXd-MK-dsW">
+                                <rect key="frame" x="20" y="103" width="374" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="lXe-Fk-HtX" firstAttribute="top" secondItem="4ZX-07-eKa" secondAttribute="top" constant="71" id="M2t-Yn-JGt"/>
-                            <constraint firstItem="lXe-Fk-HtX" firstAttribute="bottom" secondItem="4ZX-07-eKa" secondAttribute="bottom" constant="34" id="oKc-td-vR8"/>
-                            <constraint firstItem="lXe-Fk-HtX" firstAttribute="leading" secondItem="4ZX-07-eKa" secondAttribute="leading" id="q5w-Ta-jQz"/>
-                            <constraint firstItem="4ZX-07-eKa" firstAttribute="trailing" secondItem="lXe-Fk-HtX" secondAttribute="trailing" id="rd3-u2-NUy"/>
+                            <constraint firstItem="njX-1E-uWa" firstAttribute="centerY" secondItem="lXe-Fk-HtX" secondAttribute="centerY" id="JLX-mh-di2"/>
+                            <constraint firstItem="lXe-Fk-HtX" firstAttribute="top" secondItem="4ZX-07-eKa" secondAttribute="top" constant="75" id="SQb-YQ-6cr"/>
+                            <constraint firstItem="4ZX-07-eKa" firstAttribute="bottom" secondItem="lXe-Fk-HtX" secondAttribute="bottom" id="WZC-bq-dOj"/>
+                            <constraint firstItem="njX-1E-uWa" firstAttribute="width" secondItem="lXe-Fk-HtX" secondAttribute="width" id="hRg-qW-NsR"/>
+                            <constraint firstItem="lXe-Fk-HtX" firstAttribute="leading" secondItem="4ZX-07-eKa" secondAttribute="leading" id="sz0-58-hXe"/>
+                            <constraint firstItem="njX-1E-uWa" firstAttribute="height" secondItem="lXe-Fk-HtX" secondAttribute="height" id="zSt-Iu-l1h"/>
+                            <constraint firstItem="4ZX-07-eKa" firstAttribute="trailing" secondItem="lXe-Fk-HtX" secondAttribute="trailing" id="ziG-Qs-rpD"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="4ZX-07-eKa"/>
                     </view>
                     <navigationItem key="navigationItem" title="Home" id="n9o-EK-ehW"/>
                     <connections>
                         <outlet property="collectionView" destination="lXe-Fk-HtX" id="iWX-cN-qGi"/>
+                        <outlet property="mapView" destination="njX-1E-uWa" id="DmK-Ef-ZCI"/>
                         <outlet property="searchBar" destination="KXd-MK-dsW" id="W38-lJ-CwR"/>
                         <segue destination="zIR-Nf-grx" kind="presentation" identifier="viewImageSegueIdentifier" id="mLx-RH-mdD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="t2W-XG-oIf" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4988" y="-602"/>
+            <point key="canvasLocation" x="4986.9565217391309" y="-602.00892857142856"/>
         </scene>
         <!--Item-->
         <scene sceneID="YoX-j6-KNq">
