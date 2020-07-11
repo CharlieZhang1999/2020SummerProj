@@ -18,6 +18,7 @@ struct Item {
 }
 class firstViewController: UIViewController {
 
+    @IBOutlet weak var segControl: UISegmentedControl!
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -52,9 +53,16 @@ class firstViewController: UIViewController {
         mapView.isHidden = true
         filtedData = data
         setupMapView()
+        let font = UIFont(name: "AppleSDGothicNeo-Regular", size: 16)
+        segControl.setTitleTextAttributes([NSAttributedString.Key.font: font as Any],
+                                                for: .normal)
+        segControl.setTitleTextAttributes([NSAttributedString.Key.foregroundColor: #colorLiteral(red: 1, green: 0.419141829, blue: 0.3983109295, alpha: 1)], for: .selected)
+        
     }
     
     private func setupMapView() {
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
         var annotations:[MKPointAnnotation]! = []
         for data in filtedData {
             let annotation = MKPointAnnotation()
@@ -63,8 +71,6 @@ class firstViewController: UIViewController {
             mapView.addAnnotation(annotation)
             annotations.append(annotation)
         }
-//        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-//        let region = MKCoordinateRegion(center: coordinate, span: span)
         mapView.showAnnotations(annotations, animated: true)
     }
     private func setupCollectionView() {
@@ -115,6 +121,7 @@ extension firstViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         filtedData = searchText.isEmpty ? data : data.filter { $0.itemName.localizedCaseInsensitiveContains(searchText)}
         collectionView.reloadData()
+        setupMapView()
     }
 }
 
