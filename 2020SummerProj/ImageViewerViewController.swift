@@ -27,6 +27,7 @@ class ImageViewerViewController: UIViewController, MKMapViewDelegate {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+
         setUpImageView()
         button.setTitleShadowColor(#colorLiteral(red: 0.05882352963, green: 0.180392161, blue: 0.2470588237, alpha: 1), for: UIControl.State.init())
         button.backgroundColor = UIColor.init(red: 0/255, green: 0/255, blue: 0/255, alpha: 1)

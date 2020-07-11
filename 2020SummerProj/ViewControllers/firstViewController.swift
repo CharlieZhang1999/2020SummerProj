@@ -1,20 +1,36 @@
 ////
 ////  firstViewController.swift
 ////  2020SummerProj
-//  Created by Jiayi Ling on 2020/6/7.
+////
+////  Created by Ted on 5/21/20.
+////  Copyright © 2020 香槟最靓的仔. All rights reserved.
+////
+//
+//import UIKit
+//
+//class firstViewController: UIViewController {
+//
+//    override func viewDidLoad() {
+//        super.viewDidLoad()
+//
+//    }
+//
+//}
+//
+//  ViewController.swift
+//  CollectionViewTest
+//
+//  Created by Emily Ling on 2020/6/7.
 //  Copyright © 2020 Jiayi Ling. All rights reserved.
 //
 
 import UIKit
 import MapKit
-import CoreLocation
 
 struct Item {
     var itemName: String
     var price: double_t
     var imageName: String
-    var latitude: double_t
-    var longitude: double_t
 }
 class firstViewController: UIViewController {
 
@@ -24,7 +40,7 @@ class firstViewController: UIViewController {
     var collectionViewFlowLayout: UICollectionViewFlowLayout!
     let cellidentifier = "ItemCollectionViewCell"
     let viewImageSegueIdentifier = "viewImageSegueIdentifier"
-    let manager = CLLocationManager()
+    //var page: Int!
     
     @IBAction func SegControl(_ sender: UISegmentedControl) {
         if sender.selectedSegmentIndex == 0 {
@@ -36,37 +52,24 @@ class firstViewController: UIViewController {
         }
     }
     
-    var data:[Item] = [Item(itemName: "5W USB Official OEM Charger and Power", price: 19.9, imageName: "1", latitude: 37.0902, longitude: -95.7129),
-                       Item(itemName: "Fire 7 Tablet - Black", price: 49.99, imageName: "2", latitude: 37.0902, longitude: -94.7129),
-                       Item(itemName: "Alexa Voice Remote", price: 39.99, imageName: "3", latitude: 37.2902, longitude: -95.7429),
-                       Item(itemName: "Echo Dot (3rd Gen)", price: 49.99, imageName: "4", latitude: 37.0952, longitude: -95.7199),
-                       Item(itemName: "Champion Men's Jersey Short With Pockets", price: 11.20, imageName: "5", latitude: 38.0902, longitude: -92.7129),
-                       Item(itemName: "CROC Classic Clog", price: 25.49, imageName: "6", latitude: 37.4902, longitude: -95.0129),
-                       Item(itemName: "Polarized Aviator Sunglasses", price: 16.99, imageName: "7", latitude: 37.1902, longitude: -95.7829),
-                       Item(itemName: "Remington R5000 Series Electric Rotary Shaver", price: 80.0, imageName: "8", latitude: 36.0902, longitude: -97.7129)]
-    var filtedData:[Item]!
+    var data:[Item] = [Item(itemName: "5W USB Official OEM Charger and Power", price: 19.9, imageName: "1"),
+                        Item(itemName: "Fire 7 Tablet - Black", price: 49.99, imageName: "2"),
+                        Item(itemName: "Alexa Voice Remote", price: 39.99, imageName: "3"),
+                        Item(itemName: "Echo Dot (3rd Gen)", price: 49.99, imageName: "4"),
+                        Item(itemName: "Champion Men's Jersey Short With Pockets", price: 11.20, imageName: "5"),
+                        Item(itemName: "CROC Classic Clog", price: 25.49, imageName: "6"),
+                        Item(itemName: "Polarized Aviator Sunglasses", price: 16.99, imageName: "7"),
+                        Item(itemName: "Remington R5000 Series Electric Rotary Shaver", price: 80.0, imageName: "8")]
+    var items:[Item]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Do any additional setup after loading the view.
         setupCollectionView()
         mapView.isHidden = true
-        filtedData = data
-        setupMapView()
+        items = data
     }
     
-    private func setupMapView() {
-        var annotations:[MKPointAnnotation]! = []
-        for data in filtedData {
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: data.latitude, longitude: data.longitude)
-            annotation.title = data.itemName
-            mapView.addAnnotation(annotation)
-            annotations.append(annotation)
-        }
-//        let span = MKCoordinateSpan(latitudeDelta: 0.1, longitudeDelta: 0.1)
-//        let region = MKCoordinateRegion(center: coordinate, span: span)
-        mapView.showAnnotations(annotations, animated: true)
-    }
     private func setupCollectionView() {
         collectionView.delegate = self
         collectionView.dataSource = self
@@ -88,6 +91,8 @@ class firstViewController: UIViewController {
                 vc.price = item.price
             }
         }
+        
+        
     }
     
     private func setupCollectionViewItemSize() {
@@ -113,27 +118,26 @@ class firstViewController: UIViewController {
 
 extension firstViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        filtedData = searchText.isEmpty ? data : data.filter { $0.itemName.localizedCaseInsensitiveContains(searchText)}
-        collectionView.reloadData()
+        
     }
 }
 
 extension firstViewController:  UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filtedData.count
+        return items.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellidentifier, for: indexPath) as! ItemCollectionViewCell
-        cell.imageView.image = UIImage(named: "\(filtedData[indexPath.item].imageName)-1")
-        cell.priceLabel.attributedText = NSAttributedString.init(string: "\(String(filtedData[indexPath.item].price)) $/day")
-        cell.nameLabel.attributedText = NSAttributedString.init(string: filtedData[indexPath.item].itemName)
+        cell.imageView.image = UIImage(named: "\(items[indexPath.item].imageName)-1")
+        cell.priceLabel.attributedText = NSAttributedString.init(string: "\(String(items[indexPath.item].price)) $/day")
+        cell.nameLabel.attributedText = NSAttributedString.init(string: items[indexPath.item].itemName)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         collectionView.deselectItem(at: indexPath, animated: true)
-        let item = filtedData[indexPath.item]
+        let item = items[indexPath.item]
         performSegue(withIdentifier: viewImageSegueIdentifier, sender: item)
     }
 }
